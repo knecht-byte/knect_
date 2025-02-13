@@ -1,0 +1,105 @@
+
+
+body {
+    width: 100%;
+    background: linear-gradient(135deg, #ff4b6d, #ff7a9a); 
+    color: #333;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.letter {
+    background: white;
+    padding: 20px;
+    height: 25%;
+    width: 30%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+.heart {
+    color: red;
+    font-size: 50px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: heartbeat 1.5s infinite;
+}
+@keyframes heartbeat {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+.message {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+.btn{
+    display: block;
+    gap:25px;
+    margin:auto;
+
+
+}
+.btn a {
+    text-decoration: none;
+    color: #f9f5f6;
+    background: #d93397;
+    padding: 10px 25px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+
+
+}
+
+.play-button {
+    background-color: #e3d9df; /* Green background */
+    border: none;
+    color: rgb(247, 34, 130);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;   
+    font-family: Georgia, serif;    
+    position: left;
+    padding: 20px;
+    bottom: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.container .tenor-gif-embed {
+    max-width: 300px;
+    position: absolute;
+    left: 180px;
+}
+.tenor-gif-embed {
+    max-width: 400px;
+    right: 140px;
+    mix-blend-mode: multiply;
+}
+.container {
+    width: 700px;
+    height: 500px;
+    margin: 10px;
+    padding: 20px;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}

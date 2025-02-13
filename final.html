@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For u my darleeeng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-color: #ffe6e6;
+            text-align: center;
+            position: relative;
+            padding-top: 120px;
+        }
+        .heart-button {
+            font-size: 50px;
+            background: #ffcccb;
+            border: 2px solid #ff6666;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #ff6666;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .heart-button:hover {
+            background-color: #ff6666;
+            color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .heart-button:active {
+            transform: translateX(-50%) scale(1.2);
+        }
+        .heart-button.animated {
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.2); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+        .letter-container {
+            width: 65%;
+            background: white;
+            text-align: justify;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 1000px;
+            overflow-y: auto;
+            margin-top: 33px;
+            font-family: Georgia, serif;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            visibility: hidden;
+            position: relative;
+            z-index: 2;
+        }
+        .letter-container.show {
+            opacity: 1;
+            transform: scale(1);
+            visibility: visible;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            flex-wrap: nowrap;
+            z-index: 1;
+        }
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Added more space between images */
+        }
+        .image-container img {
+            width: auto;
+            height: auto;
+            max-width: 150px;
+            max-height: 150px;
+            opacity: 0;
+            transition: transform 1s ease, opacity 1s ease;
+        }
+        .image-container.show {
+            opacity: 1;
+        }
+        .image-container.show img {
+            opacity: 1;
+            animation: romanticFloat 2s ease-in-out infinite alternate;
+        }
+        @keyframes romanticFloat {
+            0% { transform: translateY(0) scale(1); opacity: 0.8; }
+            100% { transform: translateY(-10px) scale(1.1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <button class="heart-button" onclick="toggleAudioAndLetter()">❤️</button>
+    <audio id="loveAudio" src="Elvis Presley - Can't Help Falling In Love ( 1 hour piano version by ViOLiNiA) [ ezmp3 (mp3cut (mp3cut.net).mp3"></audio>
+    
+    <div class="image-container" id="imageContainer">
+        <div class="image-column">
+            <img src="06cfcade-174f-446e-b1c1-114a686285f2.jpg" alt="Left Image 1">
+            <img src="effa44cd-44f3-4d15-b832-087e0295fba1.jpg" alt="Left Image 2">
+            <img src="d78aeea1-1f5e-47d9-b7fe-2adc2b98c272.jpg" alt="Left Image 3">
+        </div>
+        <div class="image-column">
+            <img src="57d6baa5-6493-4da5-9543-e203854aa266.jpg" alt="Right Image 1">
+            <img src="d24bfbc2-18a9-4c01-8b57-6d4c3a94921c.jpg" alt="Right Image 2">
+            <img src="13d4e2b0-cba6-4497-a963-332ddec9356f.jpg" alt="Right Image 3">
+        </div>
+    </div>
+    
+    <div class="letter-container" id="letter">
+        <h2 position="center">Dear Darleeeeengggg!!!</h2>
+        <p>Helloooo my walking buddy, my favorite person, my Darleeeeengggg, bebe lei (dami nyan haaa haahahahaha). 
+            From the moment you came into my life, you have been my greatest blessing, my sweetest joy, and my deepest love. 
+            I find myself overwhelmed with gratitude for every moment I’ve spent with you—every laugh, every touch, every whispered "I miss you" that has made my world infinitely brighter.
+            With you, love is effortless yet sincere. It is in the small moments—sharing quiet evening, holding hands as we walk, seeing the moon shines so bright, I find the purest 
+            form of happiness. (booom lalim nyan! hahaha))</p>
+        
+        <p>Kidding aside, I wanna thank you for being my "pahinga sa nakakapagod na araw-araw", for always understanding me when I'm slow and for being
+            forgetful sometimes (pero lagi lagi no?) . I love how you understand me in ways no one else ever has, how you bring out the best in me, and
+             how you like or love me (sobrang ramdam ko yon) —not just for my strengths but also for my flaws. Thank you for making me feel complete, as if there’s no room for sadness or fear.
+             Thank you for every laughter, every smile, and for all the little things that make this all so special. Because of you, I’ve learned to appreciate every
+              moment.
+        </p>
+        <p>On this Valentine’s Day and always, I want you to know that you are my heart, my soul, my everything. There will never be enough words to fully express just how much you mean to me, but I 
+            promise to show you, in every way I can, for as long as I live.</p>
+
+        <p>Ayoko na mag english!!! nauubusan na ko saka nakukulitan na sakin si chatGPT. HAHAHAHAHAHA. Pauna pa lang to ha, mahaba pa tong araw na to. Marami pa kong pasabog na sa buong araw, kaya ichat mo lang ako
+            kapag lalabas tayo today. I just want this day to be special for you, of course for me too. 
+        </p>
+        <p>
+            Looking forward ako sa more kain sa labas natin, more walking dates, soon na travels natin na magkasama tayo na bubuo tayo ng magaganda at masasaya nating memories. At soon, maabot natin nag mga pangrap natin
+             na magksama tayo, na icecelebrate natin na tayong dalawa. At syempre, soon, alam mo na yon, ako na gagawa ng paraan PERO MALAY MO NAMN MALAPIT NA :)))))))))))))))))))
+        </p>
+        <p>IKAW ANG PALAGING PIPILIIN SA ARAW-ARAW, ORAS-ORAS, SEGU-SEGUNDO, WALANG IBA. At tatandaan mo palagi kang maganda, lalong lalo na sa paningin ko. </p>
+        <p>MAHAL KITA PALAGI, DARLEEEENG KO!!!</p>
+        <p>Yours sincerely,<br>Paul</p>
+    </div>
+
+    <script>
+        var audio = document.getElementById("loveAudio");
+        var letter = document.getElementById("letter");
+        var heartButton = document.querySelector(".heart-button");
+        var imageContainer = document.getElementById("imageContainer");
+        
+        function toggleAudioAndLetter() {
+            if (audio.paused) {
+                audio.play();
+                letter.classList.add("show");
+                imageContainer.classList.add("show");
+                heartButton.classList.add("animated");
+            } else {
+                audio.pause();
+                letter.classList.remove("show");
+                imageContainer.classList.remove("show");
+                heartButton.classList.remove("animated");
+            }
+        }
+    </script>
+</body>
+</html>
+
